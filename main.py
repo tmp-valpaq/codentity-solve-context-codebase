@@ -53,6 +53,7 @@ def find_answer(data):
     return "unique constraint, hash, lookup before insert, user_id, separate analytics"
 
 @app.route('/', methods=['GET', 'POST'])
+@app.route('/query', methods=['GET', 'POST'])
 def handle():
     if request.method == 'GET':
         return jsonify({"status": "ok"}), 200
